@@ -38,12 +38,8 @@ function renderProducts() {
 
 // Render cart list
 function renderCart() { cartList.innerHTML = "";
-
-  if (cart.length === 0) {
-    const li = document.createElement("li");
-    li.textContent = "Cart is empty";
-    cartList.appendChild(li);
-    return;
+if (cart.length === 0) {
+  return;
   }
 
   cart.forEach((item) => {
